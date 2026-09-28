@@ -139,11 +139,11 @@ local options = {
 	-- change your keyboard remaps here
 	-- to disable changing a remap based on state, replace the block with nil
 	remapped_kb = {
-		-- ["Tab"] = "F3",
-    ["MB4"] = "F3",
-    ["D"] = "M",
-    ["A"] = "O",
-    ["TAB"] = "RIGHTSHIFT"
+		["TAB"] = "F3",
+    	["MB4"] = "F3",
+    	["D"] = "M",
+    	["A"] = "O",
+    -- ["TAB"] = "RIGHTSHIFT",
 		-- ["LEFT"] = "LEFTBRACE",
 		-- ["RIGHT"] = "RIGHTBRACE",
 		-- ["DOWN"] = "SEMICOLON",
@@ -185,7 +185,7 @@ local options = {
 		},
 
 		tall = {
-			key = "*-Alt_R",
+			key = "*-Grave",
 			ingame_only = false,
 			auto_disable = false,
 			f3_safe = false,
