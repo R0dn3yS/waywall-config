@@ -55,7 +55,8 @@ local function res_enable(current)
         if options.sens._use_maccel then
             waywall.exec("maccel set param sens_mult " .. sens)
         else
-            waywall.set_sensitivity(sens)
+            -- waywall.set_sensitivity(sens)
+            waywall.set_raw_sensitivity(sens)
         end
 
         current_sens = sens
@@ -284,4 +285,5 @@ waywall.listen("state", function()
     end
 end)
 
+config.input.options = "caps:none"
 return config

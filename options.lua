@@ -77,7 +77,7 @@ local options = {
 		repeat_delay = 140,
 
 		-- mouse options
-		confine_pointer = true,
+		confine_pointer = false,
 	},
 
 
@@ -133,6 +133,12 @@ local options = {
 		_normal = 2.32998545,
 		tall = 0.15717942,
 	},
+
+  raw_sensitivity = {
+    -- resolutions
+		_normal = 2.32998545,
+		tall = 0.15717942,
+  },
 
 
 	-- https://tesselslate.github.io/waywall/01_options_input.html#input-remapping
@@ -228,6 +234,8 @@ local options = {
 		-- for those, use {"keysym", "keycode"} (like for Enter: { "Return", "Enter" })
 		chat_key1 = "T",
 		chat_key2 = "Slash",
+    -- chat_key1 = "Page_Up",
+    -- chat_key2 = nil,
 		-- chat_key1 = "Insert", chat_key2 = nil -- alternative for when not using [STATE OUTPUT]
 
 		-- functions that will start on launch
