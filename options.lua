@@ -74,7 +74,7 @@ local options = {
 
 		-- key repeat
 		repeat_rate = 16,
-		repeat_delay = 140,
+		repeat_delay = 200,
 
 		-- mouse options
 		confine_pointer = false,
@@ -149,6 +149,7 @@ local options = {
     	["MB4"] = "F3",
     	["D"] = "M",
     	["A"] = "O",
+      ["LEFTCTRL"] = "RIGHTSHIFT"
     -- ["TAB"] = "RIGHTSHIFT",
 		-- ["LEFT"] = "LEFTBRACE",
 		-- ["RIGHT"] = "RIGHTBRACE",
@@ -232,8 +233,8 @@ local options = {
 		-- disable remaps when pressing the chat keys, can desync if not using [STATE OUTPUT]
 		-- some keys have different names in keysyms and keycodes https://tesselslate.github.io/waywall/03_lookup_tables.html#keycodes
 		-- for those, use {"keysym", "keycode"} (like for Enter: { "Return", "Enter" })
-		chat_key1 = "T",
-		chat_key2 = "Slash",
+		chat_key1 = nil,
+		chat_key2 = "F8",
     -- chat_key1 = "Page_Up",
     -- chat_key2 = nil,
 		-- chat_key1 = "Insert", chat_key2 = nil -- alternative for when not using [STATE OUTPUT]
