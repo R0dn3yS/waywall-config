@@ -303,7 +303,7 @@ function utils.text_mirror(options)
     local text = utils.make_mirror(options)
     local shadow
 
-    if options.shadow ~= {} then
+    if options.shadow ~= false then
         if options.shadow == nil then options.shadow = {} end
         options = utils.shallow_copy(options)
         options.dst = utils.shallow_copy(options.dst)
@@ -335,7 +335,7 @@ end
 ---@param maker? function function to create the mirror with (defaults to utils.text_mirror)
 ---@return fun(enable: boolean)
 function utils.f3_mirror(options, maker)
-    if options.shadow ~= {} then
+    if options.shadow == nil then
         if options.shadow == nil then
             options.shadow = {
                 x = options.src.gui_scale,

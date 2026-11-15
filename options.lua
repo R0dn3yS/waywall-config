@@ -132,6 +132,10 @@ local options = {
 		-- resolutions
 		_normal = 2.32998545,
 		tall = 0.15717942,
+
+		-- CS Sens
+		-- _normal = 1.59409363,
+		-- tall = 0.1075366,
 	},
 
   raw_sensitivity = {
@@ -146,14 +150,8 @@ local options = {
 	-- to disable changing a remap based on state, replace the block with nil
 	remapped_kb = {
 		["TAB"] = "F3",
-    	["MB4"] = "F3",
-    	["D"] = "M",
-    	["A"] = "O",
-      ["LEFTCTRL"] = "RIGHTSHIFT"
-    -- ["TAB"] = "RIGHTSHIFT",
-		-- ["LEFT"] = "LEFTBRACE",
-		-- ["RIGHT"] = "RIGHTBRACE",
-		-- ["DOWN"] = "SEMICOLON",
+    ["MB4"] = "F3",
+    ["Q"] = "O",
 	},
 	normal_kb = {
 		-- add any chat/title remaps you want
@@ -427,6 +425,18 @@ local options = {
 			-- }
 		},
 
+    local_difficulty = {
+      enabled = utils.set { "_normal" },
+      utils.f3_mirror {
+        src = { gui_scale = 3, line = 19, x = 124, w = 24 },
+				dst = { pos_anchor = "bottom", y = -150, w = 33, h = 7, scale = 1 },
+        shader = "none",
+        color_key = {
+          { input = "#DDDDDD", output = "#00FFFF" },
+        }
+      }
+    },
+
 		glowdar = {
 			enabled = utils.set { "_normal" },
 			utils.text_mirror {
@@ -461,14 +471,6 @@ local options = {
 		-- 		src = { gui_scale = 3, line = 11, x = 33, w = 88 },
 		-- 		dst = "src", -- copy position from src
 		-- 	},
-		-- }
-
-		-- local_difficulty = {
-		-- 	enabled = utils.set { "_normal" },
-		-- 	utils.f3_mirror {
-		-- 		src = { gui_scale = 3, line = 19, x = 124, w = 24 },
-		-- 		dst = { pos_anchor = "bottom", y = -150, w = 33, h = 7, scale = 1 }
-		-- 	}
 		-- }
 	},
 
